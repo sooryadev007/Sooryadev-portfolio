@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import Photo from "@/components/Photo";
 import Social from "@/components/ui/Social";
 import { FiDownload } from "react-icons/fi";
+
 const home = () => {
   return (
     <section className="h-full">

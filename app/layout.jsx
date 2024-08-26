@@ -1,8 +1,8 @@
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import { Weight } from "lucide-react";
 import Header from "@/components/Header";
 import PageTransition from "@/components/ui/Pagetransition";
+import { Analytics } from "@vercel/analytics/react";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -20,7 +20,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={jetbrainsMono.variable}>
         <Header />
-        <PageTransition>{children}</PageTransition>
+        <PageTransition>
+          {children}
+          <Analytics />
+        </PageTransition>
       </body>
     </html>
   );
